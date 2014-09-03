@@ -263,9 +263,3 @@ let g:tlWindowPosition = 0
 "let g:tlTokenList = []
 let g:tlRememberPosition = 1
 
-""""""""""""""""""""""""""''
-" => MaxWin
-function MaxWin()
-    silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
-endfunction
-

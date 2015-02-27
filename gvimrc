@@ -49,5 +49,5 @@ set columns=110
 
 " font setting
 "set guifont=Liberation\ Mono\ 11
-set guifont=WenQuanYi\ Micro\ Hei\ Mono\ 10
+"set guifont=WenQuanYi\ Micro\ Hei\ Mono\ 10
 

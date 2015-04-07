@@ -263,3 +263,14 @@ let g:tlWindowPosition = 0
 "let g:tlTokenList = []
 let g:tlRememberPosition = 1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" =>  emmet-vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'mattn/emmet-vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" =>  fix indenting issue of html.vim in 7.4
+" http://stackoverflow.com/questions/19323607/html-indenting-not-working-in-compiled-vim-7-4-any-ideas
+let g:html_indent_inctags = "body,head,tbody"
+let g:html_indent_autotags = ""
+

@@ -139,6 +139,9 @@ set shiftwidth=4
 set softtabstop=4
 set smarttab
 
+" Automatically remove trailing whitespace
+autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> :%s/\s\+$//e
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,9 +258,9 @@ autocmd BufRead,BufNew :call UMiniBufExplorer
 map <C-F9> :TMiniBufExplorer<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" =>  TaskList
+" =>  TaskList -- uninstalled
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'tasklist.vim'
+"Bundle 'tasklist.vim'
 map <F3> <Plug>TaskList
 let g:tlWindowPosition = 0
 "let g:tlTokenList = []
@@ -270,6 +273,7 @@ Bundle 'mattn/emmet-vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " =>  fix indenting issue of html.vim in 7.4
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " http://stackoverflow.com/questions/19323607/html-indenting-not-working-in-compiled-vim-7-4-any-ideas
 let g:html_indent_inctags = "body,head,tbody"
 let g:html_indent_autotags = ""

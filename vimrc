@@ -242,29 +242,6 @@ Bundle 'a.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'snipMate'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" =>  miniBufExplorer  -- uninstalled 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Bundle 'minibufexpl.vim'
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-"let g:miniBufExplMapCTabSwitchBufs = 1  "seems useless
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplModSelTarget = 1
-
-
-autocmd BufRead,BufNew :call UMiniBufExplorer
-
-map <C-F9> :TMiniBufExplorer<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" =>  TaskList -- uninstalled
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Bundle 'tasklist.vim'
-map <F3> <Plug>TaskList
-let g:tlWindowPosition = 0
-"let g:tlTokenList = []
-let g:tlRememberPosition = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " =>  emmet-vim
@@ -277,4 +254,9 @@ Bundle 'mattn/emmet-vim'
 " http://stackoverflow.com/questions/19323607/html-indenting-not-working-in-compiled-vim-7-4-any-ideas
 let g:html_indent_inctags = "body,head,tbody"
 let g:html_indent_autotags = ""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" =>  ctrlp.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'kien/ctrlp.vim'
 

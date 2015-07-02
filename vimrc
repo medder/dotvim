@@ -260,3 +260,10 @@ let g:html_indent_autotags = ""
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Bundle 'kien/ctrlp.vim'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" =>  vim-flake8
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" flake8 need, to install: `pip install flake8 `
+Bundle 'nvie/vim-flake8'
+
+let g:flake8_show_in_gutter=1

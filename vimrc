@@ -265,5 +265,12 @@ Bundle 'kien/ctrlp.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " flake8 need, to install: `pip install flake8 `
 Bundle 'nvie/vim-flake8'
-
 let g:flake8_show_in_gutter=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" =>  rust.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'rust-lang/rust.vim'
+" temporary solve the issue: 
+" https://github.com/rust-lang/rust.vim/issues/10
+au BufRead,BufNewFile *.rs set filetype=rust

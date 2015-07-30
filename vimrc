@@ -128,6 +128,9 @@ set fen
 " grep 
 set grepprg=grep\ -nHr\ $*
 
+" suffixesadd for 'gf' command to search
+set suffixesadd+=.rst,.md
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

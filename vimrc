@@ -200,17 +200,37 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 
-" => Taglist
-Bundle 'taglist.vim'
+" => tagbar
+Bundle 'majutsushi/tagbar'
 
-nnoremap <leader>tl :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Show_One_File = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 42
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Close_On_Select = 1
+nnoremap <leader>tb :TagbarToggle<CR>
 
+" support for rust
+" also put the following lines in to ~/.ctags
+"   --langdef=Rust
+"   --langmap=Rust:.rs
+"   --regex-Rust=/^[ \t ]*(#\[[^\]]\][ \t ]*)*(pub[ \t ]+)?(extern[ \t ]+)?("[^"]+"[ \t ]+)?(unsafe[ \t ]+)?fn[ \t ]+([a-zA-Z0-9_]+)/\6/f,functions,function definitions/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?type[ \t ]+([a-zA-Z0-9_]+)/\2/T,types,type definitions/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?enum[ \t ]+([a-zA-Z0-9_]+)/\2/g,enum,enumeration names/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?struct[ \t ]+([a-zA-Z0-9_]+)/\2/s,structure names/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?mod[ \t ]+([a-zA-Z0-9_]+)/\2/m,modules,module names/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?(static|const)[ \t ]+(mut[ \t ]+)?([a-zA-Z0-9_]+)/\4/c,consts,static constants/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?(unsafe[ \t ]+)?trait[ \t ]+([a-zA-Z0-9_]+)/\3/t,traits,traits/
+"   --regex-Rust=/^[ \t ]*(pub[ \t ]+)?(unsafe[ \t ]+)?impl([ \t\n ]*<[^>]*>)?[ \t ]+(([a-zA-Z0-9_:]+)[ \t ]*(<[^>]*>)?[ \t ]+(for)[ \t ]+)?([a-zA-Z0-9_]+)/\5 \7 \8/i,impls,trait implementations/
+"   --regex-Rust=/^[ \t ]*macro_rules![ \t ]+([a-zA-Z0-9_]+)/\1/d,macros,macro definitions/]")
+let g:tagbar_type_rust = {
+ \ 'ctagstype' : 'rust',
+ \ 'kinds' : [
+     \'T:types,type definitions',
+     \'f:functions,function definitions',
+     \'g:enum,enumeration names',
+     \'s:structure names',
+     \'m:modules,module names',
+     \'c:consts,static constants',
+     \'t:traits,traits',
+     \'i:impls,trait implementations',
+ \]
+ \}
 
 " => omnicppcomplete
 Bundle 'OmniCppComplete'

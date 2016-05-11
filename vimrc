@@ -171,7 +171,7 @@ cmap w!! w !sudo tee % >/dev/null
 " Some helpers to edit mode
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
-map <leader>ew :e %%
+map <leader>e :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
@@ -248,7 +248,7 @@ set completeopt=menu,menuone,longest,preview
 " =>  NERDTree
 Bundle 'scrooloose/nerdtree'
 
-map <leader>e :NERDTreeToggle<CR>
+map <C-E> :NERDTreeToggle<CR>
 
 let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']

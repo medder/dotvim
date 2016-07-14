@@ -276,7 +276,7 @@ let g:html_indent_autotags = ""
 " =>  ctrlp.vim
 Bundle 'ctrlpvim/ctrlp.vim'
 
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = ''
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
